@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Resell</title>
+    <link rel="stylesheet" href="./static/css/index.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="icon" type ="image/png" href="static/images/icon.png">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      font-size: 16px;
+      font-family:'Raleway', sans-serif;
+      color: #F5f5f5
+    }
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+      }
+      
+      li {
+      float: left;
+      }
+      
+      li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      }
+      
+      li a:hover {
+        background-color: #E09202;
+      }
+
+
+    a {
+      text-decoration: none;
+      font-family:'Raleway', sans-serif;
+      font-weight: bold;
+      color:#f5f5f5;
+    }
+
+    a:hover {
+      opacity: 0.75;
+    }
+    li{
+      list-style: none;
+ }
+</style>
+    
+</head>
+<body>
+ 
+  <nav class="navbar navbar-dark bg-custom d-flex justify-content-between" style = "width: 100%; font-family:'Raleway', sans-serif; background-color: #ffac12">
+         
+    <div>
+    <li><a href="/index.html">Acres</a></h2>
+    <li><a href="./products_buy.html">Buy</a></li>
+    <li><a href="./products_rent.html">Rent</a></li>
+    </div>
+    <div style="float:right; margin-left:65%;">
+           
+    <li><a href="./login.html">Login</a></li>
+    <li><a href="./signup.html">Register</a></li>
+    </div>
+          
+  </nav>
+<!-- Login form-->
+<div class="card" style= "width: 60rem; height: 80rem; margin-left: 400px; margin-top:30px; padding:30px;">
+  <img src = "https://i.ibb.co/rGnvbxb/house2.jpg" class ="card-img" alt = "...">
+  <div class = "card-body">
+     <h5 class="card-title"><span id="product_title1"></span></h1>
+     <p class = "card-text"><span id="product_id1" style="display: none;">ID:</span></p>
+     <p class = "card-text"><b>Name: </b><span id="product_name1"></span></p>
+     <p class = "card-text"><b>Long description: </b><span id="product_description1"></span></p>
+     <p class = "card-text"><b>Address: </b><span id="product_address1"></span></p>
+     <p class = "card-text"><b>Price: </b><span id="product_price1"></span></p>
+     <p class = "card-text"><b>Number of Bathrooms: </b><span id="product_baths"></span></p>
+     <p class = "card-text"><b>Number of Rooms: </b><span id="product_rooms"></span></p>
+     <p class = "card-text"><b>Total Area: </b><span id="product_area"></span></p>
+     <p class = "card-text"><b>Balcony: </b><span id="product_balcony"></span></p>
+     <p class = "card-text"><b>Posted on: </b><span id="product_date1"></span></p>
+     <br>
+     <h4 class = "card-title"><b>Seller details:</b></h4>
+     <p class = "card-text" ><b>User: </b><span id="product_seller1"></p>
+     <p class = "card-text" ><b>Contact: </b><span id="product_sellerp"></p>
+  </div>
+</div>
+ 
+ <script src="./static/js/getproperties.js"></script>
+ <script>
+   console.log(localStorage.getItem("product_name1"));
+
+
+document.getElementById("product_name1").innerHTML=localStorage.getItem("product_name1");
+document.getElementById("product_address1").innerHTML=localStorage.getItem("product_address1");
+document.getElementById("product_area").innerHTML=localStorage.getItem("product_area");
+document.getElementById("product_rooms").innerHTML=localStorage.getItem("product_rooms");
+document.getElementById("product_baths").innerHTML=localStorage.getItem("product_baths");
+document.getElementById("product_price1").innerHTML=localStorage.getItem("product_price1");
+document.getElementById("product_balcony").innerHTML=localStorage.getItem("product_balcony");
+document.getElementById("product_date1").innerHTML=localStorage.getItem("product_date1");
+document.getElementById("product_description1").innerHTML=localStorage.getItem("product_description1");
+document.getElementById("product_seller1").innerHTML=localStorage.getItem("product_seller1");
+document.getElementById("product_sellerp").innerHTML=localStorage.getItem("product_sellerp");
+
+
+
+
+
+
+$( document ).ready(function() {
+  document.getElementById("product_img1").src=localStorage.getItem("product_image1");
+});
+
+ </script>
+</body>
+</html>

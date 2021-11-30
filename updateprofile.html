@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Resell</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/main.css')}}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="icon" type ="image/png" href="static/images/icon.png">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      font-size: 16px;
+      font-family:'Raleway', sans-serif;
+      color: #F5f5f5
+    }
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+      }
+      
+      li {
+      float: left;
+      }
+      
+      li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      }
+      
+      li a:hover {
+      background-color: #111;
+      }
+
+
+    a {
+      text-decoration: none;
+      font-family:'Raleway', sans-serif;
+      font-weight: bold;
+      color:#f5f5f5;
+    }
+
+    a:hover {
+      opacity: 0.75;
+    }
+    li{
+      list-style: none;
+ }
+</style>
+</head>
+<body>
+
+ <!-- secondary navbar-->
+ <header>
+  <nav class="navbar navbar-dark bg-custom d-flex justify-content-between" style = "width: 100%; font-family:'Raleway', sans-serif;background-color: #ffac12">
+     
+    <div>
+    <li><a href="/index.html">Acres</a></h2>
+    <li><a href="./products_buy.html">Buy</a></li>
+    <li><a href="./products_rent.html">Rent</a></li>
+    </div>
+    <div style="float:right; margin-left:65%;">
+           
+    <li><a href="./login.html">Login</a></li>
+    <li><a href="./signup.html">Register</a></li>
+    </div>
+          
+  </nav>
+</header>
+
+
+
+<!-- Login form-->
+
+    <div class="row" style="margin-left:20px">
+        <!--login section-->
+        <div class="col-sm-12">
+            <form>
+                <h1>Update Profile</h1>
+              
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Name</label>
+                    <input type="text" class="form-control" id="update_name" placeholder="Enter new name">
+                  </div>
+                <button type="button" id="updateprofile" class="btn btn-primary">Submit</button>
+
+              </form>
+              <script src="./static/js/update.js"></script>
+</body>
+</html>

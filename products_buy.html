@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel= "stylesheet" href="products.css">
+    <link rel="icon" type ="image/png" href="static/images/icon.png">
+    <title>Buy</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        font-size: 16px;
+        font-family:'Raleway', sans-serif;
+        color: #F5f5f5
+      }
+
+      ul {
+        list-style-type: none;
+          font-family:'Raleway', sans-serif;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+          color: #f5f5f5;
+        }
+        
+        li {
+        float: left;
+        }
+        
+        li a {
+        display: block;
+        color: white;
+          font-family:'Raleway', sans-serif;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        }
+        
+        li a:hover {
+        background-color: #E09202;
+        }
+        li{
+          list-style: none !important;
+        }
+        li::marker{
+          display: none;
+        }
+
+      a {
+        text-decoration: none;
+        font-family:'Raleway', sans-serif;
+        font-weight: bold;
+        color:#f5f5f5;
+      }
+
+      a:hover {
+        opacity: 0.75;
+      }
+    </style>
+</head>
+<body>
+    <!-- secondary navbar-->
+  <header>
+    <nav class="navbar navbar-dark bg-custom d-flex justify-content-between" style = "width: 100%; font-family:'Raleway', sans-serif;background-color: #ffac12">
+      <div>
+      <li><a href="/index.html">Acres</a></h2>
+      <li><a href="./products_buy.html">Buy</a></li>
+      <li><a href="./products_rent.html">Rent</a></li>
+      </div>
+      <div style="float:right; margin-left:65%;">
+             
+      <li><a href="./login.html">Login</a></li>
+      <li><a href="./signup.html">Register</a></li>
+      </div>
+            
+    </nav>
+  </header>
+    <h1 style="text-align:center">Buy a Home</h1>
+    <br>
+        <div class="d-flex justify-content-center" id="filter" style="margin-left:100px;">
+                <div class="form-group col-sm-3 col-xs-6">
+                    <select data-filter="make" class="filter-make filter form-control">
+                        <option value="">Buy</option>
+                    </select>
+                    
+                </div>
+                <a href="property_buyrich.html" style="text-decoration: none;color:black"><button >Most expensive</button></a> 
+       
+    </div>
+   
+  
+  <div class="card-deck" id="model2" >
+    <div class="card-columns">
+      </div>
+    </div>
+  </div>
+  <script src="./static/js/getpropertiesbuy.js"></script>
+  </body>
+  </html>

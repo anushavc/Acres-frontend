@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Resell</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/main.css')}}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="icon" type ="image/png" href="static/images/icon.png">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      font-size: 16px;
+      font-family:'Raleway', sans-serif;
+      color: #F5f5f5
+    }
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+      }
+      
+      li {
+      float: left;
+      }
+      
+      li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      }
+      
+      li a:hover {
+        background-color: #E09202;
+      }
+
+
+    a {
+      text-decoration: none;
+      font-family:'Raleway', sans-serif;
+      font-weight: bold;
+      color:#f5f5f5;
+    }
+
+    a:hover {
+      opacity: 0.75;
+    }
+    li{
+      list-style: none;
+ }
+</style>
+</head>
+<body>
+ 
+<!--secondary-->
+  <header>
+    <nav class="navbar navbar-dark bg-custom d-flex justify-content-between" style = "width: 100%; font-family:'Raleway', sans-serif;background-color: #ffac12">
+       
+      <div>
+      <li><a href="/index.html">Acres</a></h2>
+      <li><a href="./products_buy.html">Buy</a></li>
+      <li><a href="./products_rent.html">Rent</a></li>
+      </div>
+      <div style="float:right; margin-left:65%;">
+             
+   
+      </div>
+            
+    </nav>
+  </header>
+<!--end of navbar--> 
+
+<!-- Login form-->
+
+
+<body style = "background:#ffffff">
+  <div style="position: absolute;
+      top: 40%;
+      left: 40%;
+      margin-top: -10%;
+      margin-left: -15%;
+      width: 50%;
+      height: 500px;
+      background:#f5f5f5;text-align:left;font-size:20px;">
+  <div class="row" style="margin-left:20px">
+    <!--login section-->
+    <div class="col-sm-12">
+      <br>
+      <br>
+      <h1>Get Properties Near You</h1>
+      <br>
+        <p><b>Pin Code:</b><span ></span></p>
+        <input id="pincode" value="pincode">
+      <br>
+        <p><b>Radius:</b><span ></span></p>
+        <input id="radius" value="raduis">
+        <button type="submit" id="raduispropsub">Submit</button>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="card-deck" id="model9">
+            <div class="card-columns">
+              </div>
+            </div>
+          </div>
+    </div>
+        <br>
+      <script>
+$("#raduispropsub").click(function() {
+    let pincode=document.getElementById("pincode").value;
+    let radius=document.getElementById("radius").value;
+    $.ajax({
+    
+    type: "GET",
+    url: "http://localhost:5000/api/properties/raduis/"+pincode+"/"+radius,
+    crossdomain:true,
+    dataType: "json",
+    success: function (data) {
+        var options = "";
+      var count=0;
+
+      $.each(data.data, function( key, value ) {
+        product_id=value._id;
+        options += 
+        `<div class="row-row-cols-1 row-cols-md-3 border-primary shadow-lg p-3 mb-5 bg-white rounded" style="margin:100px">
+        <div class = "col mb-4">
+          <div class = "card">
+            <img class="card-img-top" style="display: block;max-width: 100%; max-height: 100%;padding:20px;" src="https://i.ibb.co/vsdTLHZ/house3.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h3 class="card-title text-custom" style="text-align:left;font-family: 'Montserrat', sans-serif; color:"#FFAC12 !important;">${value.name}</h3>
+              <p class="card-text" style="text-align:left;font-family: 'Montserrat', sans-serif;">Price: Rs ${value.price}</p>
+              <p class="card-text" style="text-align:left;font-family: 'Montserrat', sans-serif;">Address: ${value.address}</p>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    `;
+      count++;
+    }
+    );
+    $("#model9").append(options);
+      }
+    });
+
+});
+
+
+         
+
+      </script>
+</body>
+</html>

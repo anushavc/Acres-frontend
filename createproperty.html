@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Resell</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/main.css')}}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="icon" type ="image/png" href="static/images/icon.png">
+    
+</head>
+
+<body>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      font-size: 16px;
+      font-family:'Raleway', sans-serif;
+      color: #F5f5f5
+    }
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+      }
+      
+      li {
+      float: left;
+      }
+      
+      li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      }
+      
+      li a:hover {
+      background-color: #111;
+      }
+
+
+    a {
+      text-decoration: none;
+      font-family:'Raleway', sans-serif;
+      font-weight: bold;
+      color:#f5f5f5;
+    }
+
+    a:hover {
+      opacity: 0.75;
+    }
+    li{
+      list-style: none;
+ }</style>
+  <!-- secondary navbar-->
+  <header>
+    <nav class="navbar navbar-dark bg-custom d-flex justify-content-between" style = "width: 100%; font-family:'Raleway', sans-serif;background-color: #ffac12">
+       
+      <div>
+      <li><a href="/index.html">Acres</a></h2>
+      <li><a href="./products_buy.html">Buy</a></li>
+      <li><a href="./products_rent.html">Rent</a></li>
+      </div>
+      <div style="float:right; margin-left:65%;">
+             
+      </div>
+            
+    </nav>
+  </header>
+<!--end of navbar-->
+
+
+<!-- Login form-->
+
+    <div class="row" style="margin-left:20px">
+        <!--login section-->
+        <div class="col-sm-6" style="text-align:left">
+            <form>
+                <h1>Create Property</h1>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Name</label>
+                  <input type="text" class="form-control" id="pro_title" aria-describedby="emailHelp" placeholder="Enter title of your product">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Description of property</label>
+                  <input type="text" class="form-control" id="pro_desc" placeholder="Enter the description">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Address</label>
+                    <input type="text" class="form-control" id="pro_address" placeholder="Enter the Address">
+                  </div>
+
+                  <!--file-->
+                <input id="inp" type='file'>
+
+
+                 <div class="form-group">
+                     <!--price-->
+                  <label for="exampleInputPassword1">Price</label>
+                  <input type="number" class="form-control" id="pro_price" placeholder="Enter the price">
+                </div>
+                <!--Rent/Buy-->
+                <label for="rentorbuy">Choose Rent/Buy:</label>
+<select id="rentorbuy">
+  <option value="rent">Rent</option>
+  <option value="buy">Buy</option>
+</select>
+<!--property type-->
+<select data-filter="model" id="modelproperty" class="filter-model filter form-control">
+    <option value="">Select Model</option>
+    <option value="Apartment">Apartment</option>
+    <option value="House">House</option>
+    <option value="Duplex">Duplex</option>
+    <option value="Farmhouse">Farmhouse</option>
+    <option value="Studio Apartment">Studio Apartment</option>
+    <option value="Penthouse">Penthouse</option>
+    <option value="Show All">Show All</option>
+</select>
+<!--no of bathrooms-->
+<label for="exampleInputPassword1">Number of Bathrooms</label>
+<input type="number" class="form-control" id="no_of_bathrooms" placeholder="Enter the bathrooms">
+<!--no of bathrooms-->
+<label for="exampleInputPassword1">Number of Rooms</label>
+<input type="number" class="form-control" id="no_of_rooms" placeholder="Enter the Number of rooms">
+<!--total area-->
+<label for="exampleInputPassword1">Total Area</label>
+<input type="number" class="form-control" id="totalarea1" placeholder="Total area">
+<!--balcony-->
+<label for="balcony">Balcony:</label>
+<select id="balcony">
+  <option value="true">Yes</option>
+  <option value="false">No</option>
+</select>
+<br>
+<label for="exampleInputPassword1">Seller email: </label>
+<input type="email" class="form-control" id="selleremail" placeholder="Seller email">
+<label for="exampleInputPassword1">Seller phone number: </label>
+<input type="number" class="form-control" id="sellerphone" placeholder="Seller phone">
+
+        </div>
+     
+      </div>
+      <button class="btn btn-primary" style="margin:20px;margin-left:40px" id="productpost" >Post</button>
+    </form>
+    <div id="result"></div>
+
+<!-- Login form-->
+<div class="row" style="height:60vh">
+
+  <div class="col-sm-8 col-md-8 col-lg-8 align-items-center">
+
+  </div>
+
+</div>
+
+
+</body>
+
+<script src="./static/js/product_create.js"></script>
+<script>
+ 
+</script>
+</html>

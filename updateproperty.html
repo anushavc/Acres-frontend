@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Resell</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/main.css')}}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="icon" type ="image/png" href="static/images/icon.png">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      font-size: 16px;
+      font-family:'Raleway', sans-serif;
+      color: #F5f5f5
+    }
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+      }
+      
+      li {
+      float: left;
+      }
+      
+      li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      }
+      
+      li a:hover {
+      background-color: #111;
+      }
+
+
+    a {
+      text-decoration: none;
+      font-family:'Raleway', sans-serif;
+      font-weight: bold;
+      color:#f5f5f5;
+    }
+
+    a:hover {
+      opacity: 0.75;
+    }
+    li{
+      list-style: none;
+ }
+</style>
+    
+</head>
+<body>
+  <!--secondary nav bar-->
+  <header>
+    <nav class="navbar navbar-dark bg-custom d-flex justify-content-between" style = "width: 100%; font-family:'Raleway', sans-serif;background-color: #ffac12">
+       
+      <div>
+      <li><a href="/index.html">Acres</a></h2>
+      <li><a href="./products_buy.html">Buy</a></li>
+      <li><a href="./products_rent.html">Rent</a></li>
+      </div>
+      <div style="float:right; margin-left:65%;">
+             
+      <li><a href="./login.html">Login</a></li>
+      <li><a href="./signup.html">Register</a></li>
+      </div>
+            
+    </nav>
+  </header>
+
+<!-- Login form-->
+
+    <div class="row" style="margin-left:20px">
+        <!--login section-->
+        <div class="col-sm-12">
+            <form>
+                <h1>Update Product</h1>
+                
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Name</label>
+                  <input type="text" class="form-control" id="uptitle" aria-describedby="emailHelp" placeholder="Enter title of your product">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Description of property</label>
+                  <input type="text" class="form-control" id="updesc" placeholder="Enter the description">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Address</label>
+                    <input type="text" class="form-control" id="upaddress" placeholder="Enter the Address">
+                  </div>
+
+                <input id="inp" type='file'>
+<p id="b64"></p>
+<img id="img" height="150">
+                 <div class="form-group">
+                     <!--price-->
+                  <label for="exampleInputPassword1">Price</label>
+                  <input type="number" class="form-control" id="up_price" placeholder="Enter the price">
+                </div>
+                <!--Rent/Buy-->
+                <label for="rentorbuy">Choose Rent/Buy:</label>
+<select id="uprentorbuy">
+  <option value="rent">Rent</option>
+  <option value="buy">Buy</option>
+</select>
+<!--property type-->
+<select data-filter="model" id="upmodelproperty" class="filter-model filter form-control">
+    <option value="">Select Model</option>
+    <option value="Apartment">Apartment</option>
+    <option value="House">House</option>
+    <option value="Duplex">Duplex</option>
+    <option value="Farmhouse">Farmhouse</option>
+    <option value="Studio Apartment">Studio Apartment</option>
+    <option value="Penthouse">Penthouse</option>
+    <option value="Show All">Show All</option>
+</select>
+<!--no of bathrooms-->
+<label for="exampleInputPassword1">Number of Bathrooms</label>
+<input type="number" class="form-control" id="upno_of_bathrooms" placeholder="Enter the bathrooms">
+<!--no of bathrooms-->
+<label for="exampleInputPassword1">Number of Rooms</label>
+<input type="number" class="form-control" id="upno_of_rooms" placeholder="Enter the Number of rooms">
+<!--total area-->
+<label for="exampleInputPassword1">Total Area</label>
+<input type="number" class="form-control" id="uptotalarea" placeholder="Total area">
+<!--balcony-->
+<label for="balcony">Balcony:</label>
+<select id="upbalcony">
+  <option value="true">Yes</option>
+  <option value="false">No</option>
+</select>
+
+                <button type="button" id="updateproduct" class="btn btn-primary">Update</button>
+
+              </form>
+              <script src="./static/js/update.js"></script>
+</body>
+</html>
